@@ -6,6 +6,7 @@
     function closeSession(){
         if($_SESSION["autentificado"]!= "SI"){
             header("Location: index.php?errorusuario=si");
+            exit();
         }
     }
                 
@@ -23,7 +24,7 @@
     </header>
     <section>
         <a href="list_clients.php">Clientes</a>
-        <a href="list_motorbikes.php">Motocicletas</a>
+        <a href="list_motorbike.php">Motocicletas</a>
         <a href="list_spares.php">Repuestos</a>
         <a href="list_inovice.php">Facturas</a>
     </section>

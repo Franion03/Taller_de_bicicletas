@@ -7,16 +7,7 @@
     <title>Fran Quiles</title>
 </head>
 <body>
-    <?php
-        if (isset($_REQUEST['btnAceptar'])) { 
-            if($_SESSION["autentificado"]!= "SI"){
-                header("Location: index.php?errorusuerio=si");
-            }
-                session_start();
-                $_SESSION['name']=$_REQUEST['name'];
-                $_SESSION['password']="";
-        }
-    ?> 
+
     <form action="procesar.php" method="post"> 
         Entrar:
         <input placeholder="Usuario" type="text" name="name">
