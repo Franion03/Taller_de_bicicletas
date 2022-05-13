@@ -1,7 +1,10 @@
 <?php
     session_start();
-    if($_SESSION["autentificado"]!=1)
-        header("Location: login.html")
+    
+    if($_SESSION["autentificado"]!= "SI"){
+        header("Location: index.php?errorusuario=si");
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +49,7 @@
 
         $sentenciaSQL=("insert into clientes(DNI, Nombre, Apellido1, Apellido2, Direccion, Cp, Poblacion, Provincia, Telefono, Email, Fotografia) values ('$dni','$nombre','$apellido1','$apellido2','$direccion','$cp','$poblacion','$provincia','$telefono','$email','$jpg')");
         
-        $result=$conexion->query($sentenciaSQL);
+        $result=$conn->query($sentenciaSQL);
         if(!$result) {
             echo "<br>Error al introducir el Cliente en la Base de Datos";
         }

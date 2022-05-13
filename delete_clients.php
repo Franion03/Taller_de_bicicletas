@@ -1,7 +1,10 @@
 <?php
     session_start();
-    if($_SESSION["autentificado"]!=1)
-        header("Location: login.html")
+    
+    if($_SESSION["autentificado"]!= "SI"){
+        header("Location: index.php?errorusuario=si");
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +22,7 @@
         for($i=0; $i<count($arrayBorrados);$i++)
         {
             $sentenciaSQL="DELETE from clientes where Id_Cliente='$arrayBorrados[$i]'";
-            $result=$conexion->query($sentenciaSQL);
+            $result=$conn->query($sentenciaSQL);
             
             if(!$result)
             {

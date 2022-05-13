@@ -1,7 +1,10 @@
 <?php
     session_start();
-    if($_SESSION["autentificado"]!=1)
-        header("Location: login.html")
+    
+    if($_SESSION["autentificado"]!= "SI"){
+        header("Location: index.php?errorusuario=si");
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

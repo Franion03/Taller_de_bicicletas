@@ -45,7 +45,7 @@
             </tr>
             <?php
                 include("conexion.php");
-                //include("eliminar_temporales.php");
+                include("delete_temporals.php");
                 $sql="SELECT * FROM clientes order by Id_Cliente";
 
                 $result = $conn->query($sql);
@@ -75,7 +75,7 @@
                     
                     echo "<tr>
                     <td><center><input type=checkbox name=borrar[] value=$id_cliente></center></td>
-                    <td><center><a href=editar_cliente.php?id=$id_cliente> ✏️ </a></center></td>
+                    <td><center><a href=edit_clients.php?id=$id_cliente> ✏️ </a></center></td>
                     <td><center><b>$id_cliente</b></center></td>
                     <td>$dni</td>
                     <td>$nombre</td>
