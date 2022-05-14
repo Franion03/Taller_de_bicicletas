@@ -3,12 +3,6 @@
     
     session_start();
     
-    function closeSession(){
-        if($_SESSION["autentificado"]!= "SI"){
-            header("Location: index.php?errorusuario=si");
-            exit();
-        }
-    }
                 
 ?> 
 <html lang="en">
@@ -20,7 +14,7 @@
 </head>
 <body>
     <header>
-        <a onclick=closeSession() href="list_clients.php">Cerrar Sesion</a>
+        <a  href="close_session.php">Cerrar Sesion</a>
     </header>
     <section>
         <a href="list_clients.php">Clientes</a>
