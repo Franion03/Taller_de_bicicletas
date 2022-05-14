@@ -34,7 +34,7 @@
         $unidades=$_POST['unidades'];
         
 
-        $sql=("SELECT * from repuestos where Referencia=$referencia");
+        $sql=("SELECT *  FROM repuestos where Referencia=$referencia");
 
         $result = $conn->query($sql);
         $rows= $result->fetchAll();
@@ -52,7 +52,7 @@
         $total=$base_imponible+($base_imponible*$iva/100);
 
 
-        $sentenciaSQL=("UPDATE factura
+        $sentenciaSQL=("UPDATE facturas
         set Matricula='$matricula',
         Mano_Obra='$mano_de_obra',
         Precio_Hora='$precio_hora',

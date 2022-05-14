@@ -49,7 +49,7 @@
                 foreach ($rows as $row){
                     $numero_factura=$row['Numero_Factura'];
                     $matricula=$row['Matricula'];
-                    $mano_de_obra=$row['Mano_de_Obra'];
+                    $mano_de_obra=$row['Mano_Obra'];
                     $precio_hora=$row['Precio_Hora'];
                     $fecha_emision=$row['Fecha_Emision'];
                     $fecha_pago=$row['Fecha_Pago'];

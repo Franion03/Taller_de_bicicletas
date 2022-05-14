@@ -45,7 +45,7 @@
         $total=$base_imponible+($base_imponible*$iva/100);
 
         $sql=("insert into detalle_factura(Numero_Factura, Referencia, Unidades) values ('$numero_factura', '$referencia', '$unidades')");
-        $result=$conexion->query($sql);
+        $result=$conn->query($sql);
         if(!$result) {
             echo "<br>Error al introducir el detalle en la Base de Datos<br>";
         }
@@ -53,8 +53,8 @@
             echo "<br>El detalle se ha introducido con exito en la base de Datos<br>";
         }
         
-        $sql=("insert into factura(Numero_Factura, Matricula, Mano_de_Obra, Precio_Hora, Fecha_Emision, Fecha_Pago, Base_Imponible, IVA, Total) values ('$numero_factura', '$matricula', '$mano_de_obra', '$precio_hora', '$fecha_emision', '$fecha_pago', '$base_imponible', '$iva', '$total')");
-        $result=$conexion->query($sql);
+        $sql=("insert into facturas(Numero_Factura, Matricula, Mano_Obra, Precio_Hora, Fecha_Emision, Fecha_Pago, Base_Imponible, IVA, Total) values ('$numero_factura', '$matricula', '$mano_de_obra', '$precio_hora', '$fecha_emision', '$fecha_pago', '$base_imponible', '$iva', '$total')");
+        $result=$conn->query($sql);
         if(!$result) {
             echo "<br>Error al introducir la factura en la Base de Datos";
         }
