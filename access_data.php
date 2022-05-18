@@ -22,6 +22,7 @@
         <a href="list_spares.php">Repuestos</a>
         <a href="list_inovice.php">Facturas</a>
         <a href="filter_clients.php">Filtrar Clientes</a>
+        <a href="filter_inovices.php">Filtrar Facturas</a>
     </section>
 </body>
 </html>
